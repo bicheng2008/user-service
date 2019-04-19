@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script th:src="@{/scripts/jquery.min.js}"></script>
+<script th:src="@{/scripts/index.js}"></script>
+<title>ユーザ情報</title>
+</head>
+<body>
+	<table >
+		<tr>
+			<th>ユーザID:</th>
+			<th width="240" align="left"><input type="text" name="userId"
+				id="userId" maxlength="32" /> <span>*</span></th>
+		</tr>
+		<tr>
+			<th>ユーザ名:</th>
+			<th width="240" align="left" id="userName"></th>
+		</tr>
+		<tr></tr>
+		<tr>
+			<th colspan="2" align="right"><button id="searchBtn">検索</button></th>
+		</tr>
+	</table>
+</body>
+</html>

@@ -1,0 +1,33 @@
+server:
+  port: 8904
+
+spring:
+  application:
+    name: userapi
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/usermanage_db?characterEncoding=utf8&useSSL=false
+    username: root
+    password: P@ssw0rd
+
+  jpa:
+    database: MYSQL
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+      naming.physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+
+  cloud:
+    config:
+      uri: http://localhost:8802
+    services:
+      registrationMethod: direct
+
+  rabbitmq:
+        addresses: amqp://localhost:5672
+        username: admin
+        password: admin

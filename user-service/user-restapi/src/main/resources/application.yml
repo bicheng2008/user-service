@@ -1,0 +1,14 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8801/eureka/
+  instance:
+    prefer-ip-address: true
+
+spring:  zipkin:    enabled: true
+    base-url:  http://zipkin-service.apps.dirpcf.net
+    sender:
+      type: web
+  sleuth:
+    sampler:
+      probability: 1.0
