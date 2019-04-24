@@ -7,11 +7,7 @@ spring:
 
   cloud:
     config:
-      uri: http://localhost:8802
+      uri: http://18.188.51.39:8802
     services:
       registrationMethod: direct
-      
-  rabbitmq:
-        addresses: amqp://localhost:5672
-        username: admin
-        password: admin
+

@@ -1,12 +1,12 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8801/eureka/
+      defaultZone: http://18.188.51.39:8801/eureka/
   instance:
     prefer-ip-address: true
 
 spring:  zipkin:    enabled: true
-    base-url:  http://zipkin-service.apps.dirpcf.net
+    base-url:  http://18.188.51.39:9411/
     sender:
       type: web
   sleuth:

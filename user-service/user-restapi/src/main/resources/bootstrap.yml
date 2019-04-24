@@ -3,11 +3,11 @@ server:
 
 spring:
   application:
-    name: userapi
+    name: userservice
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/usermanage_db?characterEncoding=utf8&useSSL=false
+    url: jdbc:mysql://localhost:3306/usermanage_db?characterEncoding=utf8&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
     username: root
     password: P@ssw0rd
 
@@ -23,11 +23,7 @@ spring:
 
   cloud:
     config:
-      uri: http://localhost:8802
+      uri: http://18.188.51.39:8802
     services:
       registrationMethod: direct
 
-  rabbitmq:
-        addresses: amqp://localhost:5672
-        username: admin
-        password: admin
